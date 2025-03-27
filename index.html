@@ -1,0 +1,200 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Vibe Grid Social Network , Messenger , Groups , Posts , Freedom ; vibe grid is developed by System Down">
+  <meta name="keywords"
+    content="Vibe , Grid, VibeGrid , Vibegrid , vibegrid , vibeGrid , System Down , Social Network , Social , Network">
+  <meta name="author" content="System Down">
+  <meta name="theme-color" content="#317EFB" />
+  <link rel="manifest" href="manifest.json" />
+  <title id="titlepage">Vibe Grid Social Network</title>
+  <link rel="stylesheet" id="CustomCss" href="">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="vibegrid.png" type="image/png">
+  <script src="" id="Scripts"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body onload="Load()">
+  <div id="Loading">
+    <svg height="108px" width="108px" viewBox="0 0 128 128" class="loader">
+      <defs>
+        <clipPath id="loader-eyes">
+          <circle transform="rotate(-40,64,64) translate(0,-56)" r="8" cy="64" cx="64" class="loader__eye1"></circle>
+          <circle transform="rotate(40,64,64) translate(0,-56)" r="8" cy="64" cx="64" class="loader__eye2"></circle>
+        </clipPath>
+        <linearGradient y2="1" x2="0" y1="0" x1="0" id="loader-grad">
+          <stop stop-color="#000" offset="0%"></stop>
+          <stop stop-color="#fff" offset="100%"></stop>
+        </linearGradient>
+        <mask id="loader-mask">
+          <rect fill="url(#loader-grad)" height="128" width="128" y="0" x="0"></rect>
+        </mask>
+      </defs>
+      <g stroke-dasharray="175.93 351.86" stroke-width="12" stroke-linecap="round">
+        <g>
+          <rect clip-path="url(#loader-eyes)" height="64" width="128" fill="hsl(193,90%,50%)"></rect>
+          <g stroke="hsl(193,90%,50%)" fill="none">
+            <circle transform="rotate(180,64,64)" r="56" cy="64" cx="64" class="loader__mouth1"></circle>
+            <circle transform="rotate(0,64,64)" r="56" cy="64" cx="64" class="loader__mouth2"></circle>
+          </g>
+        </g>
+        <g mask="url(#loader-mask)">
+          <rect clip-path="url(#loader-eyes)" height="64" width="128" fill="hsl(223,90%,50%)"></rect>
+          <g stroke="hsl(223,90%,50%)" fill="none">
+            <circle transform="rotate(180,64,64)" r="56" cy="64" cx="64" class="loader__mouth1"></circle>
+            <circle transform="rotate(0,64,64)" r="56" cy="64" cx="64" class="loader__mouth2"></circle>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <nav id="MenuNav" class="sidebar close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="vibegrid.ico" alt="">
+        </span>
+        <div class="text logo-text">
+        </div>
+      </div>
+
+      <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-links">
+
+          <li class="nav-link">
+            <a onclick="LPage('Profile')">
+              <i class='bx bxs-user-account icon'></i>
+              <span class="text nav-text">Profile</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a onclick="LPage('Home')">
+              <i class='bx bx-home-alt icon'></i>
+              <span class="text nav-text">Home</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a onclick="LPage('Explore')">
+              <i class='bx bx-search icon'></i>
+              <span class="text nav-text">Explore</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a onclick="LPage('Chat')">
+              <i class='bx bx-chat icon'></i>
+              <span class="text nav-text">Chat</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a onclick="LPage('Group')">
+              <i class='bx bx-group icon'></i>
+              <span class="text nav-text">Group</span>
+            </a>
+          </li>
+          <li class="nav-link" onclick="PostNew()">
+            <a>
+              <i class='bx bx-message-square-add icon'></i>
+              <span class="text nav-text">Create Post</span>
+            </a>
+          </li>
+          <li class="nav-link" onclick="LPage('Apps')">
+            <a>
+              <i class='bx bx-window icon'></i>
+              <span class="text nav-text">Apps</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bottom-content">
+        <li>
+          <a href="SignOut.php">
+            <i class='bx bx-log-out icon'></i>
+            <span class="text nav-text">Logout</span>
+          </a>
+        </li>
+
+        <li class="mode">
+          <div class="sun-moon">
+            <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i>
+          </div>
+          <span class="mode-text text">Dark mode</span>
+
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+
+      </div>
+    </div>
+
+  </nav>
+  <div id="Page"></div>
+  <div id="Menu-Mobile">
+    <div class="navigation">
+      <ul>
+        <li class="list" id="HomeMo" onclick="LPage('Home')">
+          <a href="#Home">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list" id="ProfileMo" onclick="LPage('Profile')">
+          <a href="#Profile">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </span>
+            <span class="text">Profile</span>
+          </a>
+        </li>
+        <li class="list" id="ChatMo" onclick="LPage('Chat')">
+          <a href="#Chat">
+            <span class="icon">
+              <ion-icon name="chatbubble-outline"></ion-icon>
+            </span>
+            <span class="text">Message</span>
+          </a>
+        </li>
+        <li class="list" id="ExploreMo" onclick="LPage('Explore')">
+          <a href="#Explore">
+            <span class="icon">
+              <ion-icon name="search-outline"></ion-icon>
+            </span>
+            <span class="text">Explore</span>
+          </a>
+        </li>
+        <li class="list" id="GroupMo" onclick="LPage('Group')">
+          <a href="#Group">
+            <span class="icon">
+              <ion-icon name="chatbubbles-outline"></ion-icon>
+            </span>
+            <span class="text">Group</span>
+          </a>
+        </li>`
+        <div class="indicator" id="indicator"></div>
+      </ul>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <div id="MessAlert" style="width: 0px; visibility: hidden;"></div>
+  <div id="PostNewForm">
+    <div type="text" id="TextPost" contenteditable="" oninput="CharCount()" aria-placeholder="Type">Type Text Post</div>
+    <button id="Post" onclick="Post()">Post</button>
+    <p id="CharC"></p>
+  </div>
+  <script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>

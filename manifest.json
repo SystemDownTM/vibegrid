@@ -1,0 +1,52 @@
+{
+  "name": "Vibe Grid Social Network",
+  "short_name": "Vibe Grid",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fdf5fd",
+  "theme_color": "#024589",
+  "orientation": "portrait-primary",
+  "serviceworker": "serviceworker.js",
+  "icons": [
+    {
+      "src": "./vibegrid.ico",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "./vibegrid.ico",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "./vibegrid.ico",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "./vibegrid.ico",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "./vibegrid.ico",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "./vibegrid.ico",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./vibegrid.ico",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "./vibegrid.ico",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

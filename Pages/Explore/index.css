@@ -1,0 +1,150 @@
+#search {
+  color: white;
+  font-size: 18px;
+  background-color: #3e3f42;
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  border-radius: 5px;
+}
+#Explore {
+  width: 49%;
+  position: absolute;
+  top: 12%;
+  height: 86%;
+  border-radius: 10px;
+  left: 0%;
+  background-color: #3e3f42;
+  color: white;
+  font-size: 22px;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+#search #TextSearch {
+  width: 80%;
+  background-color: transparent;
+  height: 80%;
+  top: 7%;
+  position: absolute;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  padding-left: 10px;
+}
+#search #searchBtn {
+  background-color: transparent;
+  background-image: url(../../ico/Explore.png);
+  width: 10%;
+  height: 80%;
+  background-size: 100% 100%;
+  border-radius: 5px;
+  border: none;
+  top: 10%;
+  right: 2%;
+  position: absolute;
+}
+#Posts {
+  display: flex;
+  flex-direction: column;
+}
+#post {
+  width: 100%;
+  height: fit-content;
+  background-color: none;
+  border-bottom: 1px solid #4a4b4c;
+  padding: 10px 0px 10px 0px;
+  display: grid;
+  grid-template-columns: 50px 80%;
+  grid-row: 100%;
+  gap: 10px;
+}
+#post img {
+  width: 50px;
+  height: 50px;
+}
+#post b {
+  width: fit-content;
+  font-weight: bold;
+}
+#post p {
+  padding-left: 10px;
+  grid: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#Posts.dark #post {
+  background-color: #f9fafc;
+  color: #4a4b4c;
+}
+#infoUser {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 49%;
+  user-select: none;
+  height: 10%;
+  background-color: transparent;
+}
+#infoUser img {
+  width: 11%;
+  margin: 1%;
+  border-radius: 50%;
+  height: 90%;
+}
+#infoUser p {
+  color: white;
+  position: absolute;
+  left: 20%;
+  top: 35%;
+}
+#infoUser.dark p {
+  color: #4a4b4c;
+}
+#Posts {
+  width: 50%;
+  position: absolute;
+  top: 12%;
+  height: 86%;
+  border-radius: 10px;
+  right: 0%;
+  background-color: #3e3f42;
+}
+.indicator::after {
+  visibility: hidden;
+}
+.indicator::before {
+  visibility: hidden;
+}
+@media screen and (max-width: 800px) {
+  #search {
+    width: 99%;
+    top: 1%;
+    border-radius: 10px;
+  }
+  #search #searchBtn {
+    width: 17%;
+  }
+  #Posts {
+    top: 20%;
+    height: 80%;
+  }
+  #infoUser {
+    top: 10%;
+    height: 10%;
+    position: absolute;
+  }
+  #infoUser img {
+    width: 30%;
+    position: absolute;
+    height: 70%;
+    top: 20%;
+  }
+  #infoUser.dark p {
+    color: #fff;
+    left: 35%;
+    top: 45%;
+  }
+}

@@ -1,0 +1,277 @@
+#mode {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+  cursor: pointer;
+}
+label[for="mode"] {
+  font-size: 30px;
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+  cursor: pointer;
+}
+#ProfImg {
+  border-radius: 50%;
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  width: 10%;
+  height: 80%;
+}
+#Profile {
+  border-radius: 15px;
+  background-color: #212529;
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  width: 98%;
+  height: 95%;
+}
+#Profile.light {
+  background-color: aliceblue;
+}
+#Setting.light {
+  background-color: aliceblue;
+}
+#UserBioImg #Username {
+  position: absolute;
+  top: 0%;
+  font-size: 25px;
+  color: white;
+  left: 15%;
+}
+#Profile.light #UserBioImg #Username {
+  color: #4a4b4c;
+}
+#UserBioImg #Bio {
+  position: absolute;
+  bottom: 0%;
+  font-size: 20px;
+  color: white;
+  left: 15%;
+}
+#Profile.light #UserBioImg #Bio {
+  color: #4a4b4c;
+}
+#UserBioImg {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  border-bottom: 2px solid #afb0b1;
+}
+#PostsDiv #post {
+  color: white;
+  margin-left: 25px;
+  margin-top: 10px;
+  border-bottom: 2px solid #afb0b1;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  max-width: 100%;
+  user-select: text;
+  word-wrap: break-word;
+}
+#Profile.light #PostsDiv #post {
+  color: #4a4b4c;
+}
+#Setting .SignOutProf {
+  width: 15%;
+  right: 1%;
+  color: transparent;
+  top: 1%;
+  background-image: url(../../ico/SignOut.png);
+  background-size: 100% 100%;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  height: 8%;
+  visibility: hidden;
+}
+#FeedDiv {
+  position: absolute;
+  left: 0%;
+  width: 30%;
+  height: 80%;
+  top: 20%;
+  border-right: 2px solid #afb0b1;
+}
+#PostsDiv {
+  position: absolute;
+  left: 30%;
+  width: 70%;
+  overflow: auto;
+  height: 80%;
+  top: 20%;
+}
+#LFeed {
+  position: absolute;
+  left: 1%;
+  top: 21%;
+  font-size: 20px;
+  color: white;
+}
+#LPosts {
+  position: absolute;
+  left: 31%;
+  top: 21%;
+  font-size: 20px;
+  color: white;
+}
+#Settingbtn {
+  color: white;
+  background-color: transparent;
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  background-size: 100% 100%;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  font-size: 35px;
+}
+#Profile.light #Settingbtn {
+  color: black;
+}
+
+#Setting {
+  border-radius: 15px;
+  background-color: #212529;
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  width: 98%;
+  height: 95%;
+  display: none;
+}
+#Setting #ProfEditPic {
+  color: transparent;
+}
+#ProfEditPic {
+  visibility: hidden;
+  position: absolute;
+}
+#ProfImgEditIcon {
+  border-radius: 50%;
+  width: 10%;
+  height: 15%;
+  left: 7%;
+  top: 15%;
+  position: absolute;
+  font-size: 25px;
+  z-index: 1;
+}
+#BioEdit {
+  color: white;
+  font-size: 18px;
+  background-color: transparent;
+  width: 80%;
+  height: 5%;
+  position: absolute;
+  top: 30%;
+  left: 2%;
+  border: none;
+  outline: none;
+}
+#BioEditL {
+  color: white;
+  font-size: 18px;
+  background-color: transparent;
+  width: 80%;
+  height: 5%;
+  position: absolute;
+  top: 20%;
+  left: 3%;
+  border: none;
+}
+#Setting.light #BioEditL,
+#Setting.light #BioEdit {
+  color: black;
+}
+#Setting.light {
+  color: black;
+}
+#Setting label[for="mode"] {
+  color: black;
+}
+#ProfImgEdit {
+  border-radius: 50%;
+  width: 10%;
+  height: 15%;
+  left: 2%;
+  top: 2%;
+  position: absolute;
+}
+#Save {
+  background-color: rgb(42, 130, 197);
+  color: white;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+  bottom: 2%;
+  width: fit-content;
+  height: fit-content;
+  right: 2%;
+  padding: 10px;
+  position: absolute;
+}
+@media screen and (max-width: 800px) {
+  #Setting .SignOutProf {
+    visibility: visible;
+  }
+  #UserBioImg #Username {
+    text-align: center;
+    left: 0%;
+    width: 100%;
+    top: 15%;
+  }
+  #UserBioImg #ProfImg {
+    left: 2%;
+    width: 30%;
+  }
+  #UserBioImg #Bio {
+    top: 45%;
+    left: 35%;
+    text-wrap: wrap;
+    height: fit-content;
+    width: fit-content;
+    max-width: 70%;
+  }
+  #FeedDiv,
+  #LFeed {
+    visibility: hidden;
+  }
+  #PostsDiv,
+  #LPosts {
+    width: 100%;
+    top: 22%;
+    left: 2%;
+    height: 80%;
+  }
+  #Profile {
+    left: 3%;
+    width: 95%;
+  }
+  #ProfImgEdit {
+    width: 27%;
+  }
+  #BioEdit {
+    top: 21%;
+    left: 15%;
+  }
+  #BioEditL {
+    font-size: 18px;
+  }
+  #mode {
+    left: 55%;
+  }
+}

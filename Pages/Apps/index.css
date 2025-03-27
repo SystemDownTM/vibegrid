@@ -1,0 +1,50 @@
+#Page {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 100% 100%;
+  overflow-y: hidden;
+  user-select: none;
+}
+#searchInput {
+  flex: 1 0 50% 50%;
+  width: 50%;
+  align-self: center;
+  height: 7%;
+  font-size: 25px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  outline: none;
+}
+#programList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 0 100%;
+  overflow: auto;
+}
+#programList  li {
+    margin: 10px;
+    text-decoration: none;
+    flex: 1 0 25%;
+    background-color: rgb(175, 175, 175);
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+    border-radius: 8px;
+    align-items: center;
+    text-decoration: none;
+}
+#programList li a {
+    text-decoration: none;
+    margin: 20px;
+    color: #007AFF;
+}

@@ -1,0 +1,599 @@
+#InfoUser {
+  display: grid;
+  grid-template-rows: 75px 80%;
+  position: absolute;
+  left: 35%;
+  top: 5%;
+  background-color: hsl(225, 14%, 89%);
+  z-index: 10;
+  width: 30%;
+  height: 50%;
+  grid-template-columns: 40% 50%;
+  gap: 10px;
+  row-gap: 0px;
+  display: none;
+  user-select: none;
+}
+#InfoUser > #Close {
+  position: absolute;
+  right: 1%;
+  font-size: 25px;
+  top: 1%;
+}
+#InfoUser > #UserShowInfo {
+  width: 80%;
+  height: 50px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: self-start;
+  align-self: self-end;
+}
+#InfoUser > #BioInfoUser {
+  grid-column-start: 2;
+  align-content: start;
+  grid-column-end: 3;
+  justify-self: self-start;
+  align-self: self-start;
+}
+#infoUser > #ProfPicInfo {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 10px;
+  max-height: 70%;
+}
+#PanelUsers {
+  width: 30%;
+  left: 0%;
+  top: 0;
+  height: 99%;
+  position: absolute;
+  background-color: #212327;
+  z-index: 0;
+  user-select: none;
+}
+#Info {
+  width: 70%;
+  left: 30%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #1c1f22;
+  height: 10%;
+  user-select: none;
+  cursor: pointer;
+}
+#NameUser {
+  position: relative;
+  color: whitesmoke;
+  font-size: 20px;
+  align-self: center;
+  margin-left: 2%;
+  visibility: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#Info #ProfImg {
+  visibility: hidden;
+  position: relative;
+  margin-left: 3%;
+  height: 80%;
+  max-width: 8%;
+  border-radius: 50%;
+}
+#Info #Trash {
+  position: relative;
+  width: 8%;
+  margin-left: auto;
+  margin-right: 3%;
+  height: 80%;
+  background-image: url(../../ico/clear.png);
+  background-color: #1c1f22;
+  border: none;
+  background-size: 100% 100%;
+  border-radius: 5px;
+}
+#Info #Trash:hover {
+  background-color: #25292e;
+  cursor: pointer;
+}
+
+#SearchText::placeholder {
+  font-size: 15px;
+  padding: 10px;
+}
+#Search {
+  width: 28%;
+  left: 2%;
+  top: 2%;
+  height: 7%;
+  border-radius: 15px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  background-color: #232527;
+  z-index: 1;
+}
+#SearchText {
+  border: none;
+  outline: none;
+  width: 65%;
+  height: 80%;
+  background-color: transparent;
+  font-size: 20px;
+  color: white;
+}
+#SearchBtn {
+  width: 15%;
+  height: 100%;
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+  background-size: 100% 100%;
+}
+#PanelMess {
+  background-color: #17191a;
+  width: 70%;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  height: 89%;
+}
+#PanelMess #Messages::-webkit-scrollbar {
+  background-color: #232527;
+  color: white;
+}
+#PanelMess #Messages::-webkit-scrollbar-thumb {
+  background-color: #f8f9fa;
+  color: white;
+}
+#PanelSend {
+  background-color: #1c1f22;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  left: 0%;
+  position: absolute;
+  color: white;
+}
+#PanelSend #ImageList {
+  position: absolute;
+  background-color: #007aff;
+  width: 70%;
+  height: fit-content;
+  top: -200%;
+  right: 0;
+  display: none;
+  flex-direction: row;
+  justify-content: left;
+  align-self: center;
+}
+#PanelSend p {
+  margin: 10px;
+}
+#PanelSend img {
+  width: 35px;
+  height: 35px;
+}
+#Search #SearchText:focus,
+#Search #SearchText:active {
+  outline: none;
+  border-bottom: 1px solid #007aff;
+  transition: 0.5s;
+}
+
+#Search:focus-within #SearchText::placeholder {
+  opacity: 0;
+}
+#PanelMess #Messages {
+  background-color: #17191a;
+  width: 95%;
+  position: absolute;
+  left: 0%;
+  top: 5%;
+  height: 85%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  user-select: text;
+}
+#Messages #m {
+  background-color: #232527;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  width: fit-content;
+  max-width: 90%;
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 15px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  border-top-right-radius: 0px;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 110px;
+}
+#Messages #m img,
+#Messages #t img {
+  width: 100%;
+  height: 100%;
+}
+#Messages #m p {
+  font-size: 12px;
+  color: black;
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-top: 15px;
+  font-family: "Vazirmatn" !important;
+}
+#Messages #t p {
+  font-size: 12px;
+  color: black;
+  justify-self: flex-end;
+  align-self: flex-end;
+  font-family: "Vazirmatn" !important;
+}
+#Messages #t {
+  min-width: 110px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #232527;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  width: fit-content;
+  max-width: 90%;
+  font-size: 16px;
+  padding: 15px;
+  margin: 5px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  border-top-left-radius: 0px;
+  margin-right: auto;
+}
+#Messages.dark #m {
+  background-color: #adadaf;
+}
+#Messages.dark #t {
+  background-color: #007aff;
+}
+#PanelSend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#PanelSend #MessForSend {
+  bottom: 0%;
+  width: 70%;
+  left: 10%;
+  overflow: auto;
+  height: auto;
+  min-height: 90%;
+  max-height: 250%;
+  color: white;
+  outline: none;
+  padding: 5px;
+  font-size: 25px;
+}
+
+#PanelSend #SendMess {
+  top: 5%;
+  width: 8%;
+  height: 90%;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  right: 2%;
+  background-size: 100% 100%;
+  font-size: 38px;
+  cursor: pointer;
+}
+#PanelSend #Media {
+  top: 5%;
+  width: 8%;
+  height: 90%;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  right: 10%;
+  font-size: 38px;
+  cursor: pointer;
+}
+#Stickers {
+  background-color: #232527;
+  width: 70%;
+  height: 60%;
+  position: absolute;
+  left: 1%;
+  bottom: 11%;
+  border-radius: 5px;
+  border-bottom-left-radius: 0px;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+#Stickers::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#Stickers::-webkit-scrollbar {
+  background-color: #232527;
+  color: white;
+}
+#Stickers::-webkit-scrollbar-thumb {
+  background-color: #f8f9fa;
+  color: white;
+}
+#StickersShow {
+  font-size: 35px;
+  position: relative;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+#stickerm {
+  font-size: 25px;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: crosshair;
+  user-select: none;
+}
+#stickerm:hover {
+  transition: 0.3s;
+  background-color: #2c2e30;
+}
+#sticker {
+  top: 10%;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin: 2px;
+}
+#CategoryEmo {
+  color: white;
+  font-size: 18px;
+  left: 5px;
+}
+#Back {
+  color: white;
+  visibility: visible;
+  font-size: 50px;
+  background-color: transparent;
+  border: none;
+  width: 5%;
+  height: 80%;
+  visibility: hidden;
+}
+#UsersT {
+  width: 100%;
+  left: 0%;
+  top: 15%;
+  height: 80%;
+  position: absolute;
+  background-color: #212327;
+  z-index: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow: auto;
+  user-select: none;
+}
+#UsersT #UserT {
+  color: white;
+  text-align: center;
+  position: relative;
+  width: 95%;
+  display: inline-block;
+  max-height: 13%;
+  font-size: 25px;
+  align-items: center;
+  flex-grow: 1;
+  display: flex;
+  margin-left: 0;
+  margin-top: 2px;
+  background-color: #232527;
+  border: none;
+  border-bottom: 2px solid #101111;
+  cursor: pointer;
+}
+#UsersT > #UserT > #UsernameT.large {
+  animation: scroll-text 3s infinite;
+  z-index: 0;
+  margin-left: 10px;
+}
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+#UserT #UsernameT {
+  position: relative;
+  bottom: 35%;
+  height: 10%;
+  font-size: large;
+  font-family: sans-serif;
+  flex: 75%;
+  margin-right: 25%;
+  color: white;
+}
+#UserT::before {
+  width: 15px;
+  content: none;
+  color: transparent;
+  border-radius: 0%;
+  height: 10px;
+  margin: 0;
+}
+#UserT.showbefore::before {
+  content: "*";
+  transition: 0.7;
+  animation: colorChange 1s ease-in-out;
+  background-color: #007aff;
+  border-radius: 50%;
+}
+#UserT {
+  border-radius: 25px;
+}
+@keyframes colorChange {
+  0% {
+    border-radius: 0%;
+    background-color: transparent;
+    transform: rotate(0deg);
+  }
+  50% {
+    background-color: #007aff;
+    transform: rotate(360deg);
+  }
+  100% {
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+}
+#UserT #DeskUser {
+  font-size: 16px;
+  position: absolute;
+  left: 35%;
+  bottom: 0%;
+
+  color: #9c9c9c;
+}
+#UserT #DeskUser img {
+  width: 10px;
+  height: 10px;
+}
+#UserT #ProfPic {
+  height: 95%;
+  flex: 25%;
+  margin-left: 10%;
+  width: 22%;
+  z-index: 1;
+  border-radius: 10px;
+  position: relative;
+}
+#contextMenu {
+  flex-direction: column;
+  border-radius: 5px;
+  position: absolute;
+  color: white;
+  z-index: 1;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#contextMenu button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+#contextMenu button:hover {
+  transition: 0.3s;
+  background-color: #007aff;
+}
+@media screen and (max-width: 800px) {
+  #UserT #UsernameT {
+    font-size: 18px;
+    align-self: first baseline;
+    margin-left: 2%;
+    text-align: left;
+  }
+  #NameUser {
+    align-self: center;
+    margin-left: 5%;
+  }
+  #Info #ProfImg {
+    max-width: 15%;
+    margin-left: 10%;
+  }
+  #UserT #ProfPic {
+    width: 10%;
+  }
+  #UserT #DeskUser {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 2%;
+    left: 25%;
+  }
+  #Back {
+    visibility: visible;
+  }
+  #PanelUsers {
+    width: 100%;
+    height: 95%;
+    z-index: 2;
+  }
+  #PanelMess {
+    z-index: 1;
+    visibility: visible;
+    width: 99%;
+    left: 1%;
+    height: 83%;
+    border-radius: 15px;
+  }
+  #PanelMess div {
+    border-radius: 15px;
+  }
+  #Info {
+    width: 99%;
+    left: 1%;
+  }
+  #UsersT #UserT {
+    left: 0%;
+  }
+  #UsersT {
+    left: 0%;
+    width: 100%;
+    z-index: 2;
+    visibility: visible;
+  }
+  #Search {
+    width: 95%;
+    height: 10%;
+    z-index: 3;
+  }
+  #SearchBtn {
+    width: 18%;
+  }
+  #ProfPic {
+    width: 20%;
+  }
+  #StickersShow {
+    width: 15%;
+  }
+  #Stickers {
+    width: 98%;
+  }
+  #PanelSend #MessForSend {
+    left: 20%;
+    width: 48%;
+  }
+  #PanelSend #Media {
+    width: 15%;
+    right: 16%;
+  }
+  #PanelSend #SendMess {
+    width: 15%;
+  }
+}

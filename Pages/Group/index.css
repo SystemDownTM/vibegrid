@@ -1,0 +1,221 @@
+button {
+  color: transparent;
+}
+#Groups {
+  width: 30%;
+  height: 99%;
+  position: absolute;
+  background-color: #2b2e2e;
+  border-radius: 10px;
+  top: 0.5%;
+  border-end-end-radius: 0px;
+  display: flex;
+  flex-direction: column;
+}
+#Groups #Searcher {
+  height: 10%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  user-select: none;
+}
+#Groups #Searcher #Search {
+  height: 100%;
+  font-size: 300%;
+  user-select: none;
+  width: 15%;
+  color: white;
+}
+#Groups #Searcher #TextSearch { 
+  height: 100%;
+  width: 80%;
+  font-size: 15px;
+  margin-left: auto;
+  outline: none;
+  color: white;
+  border: none;
+  background-color: transparent;
+}
+  #PanelSend {
+  background-color: #2b2e2e;
+  user-select: none;
+  position: absolute;
+  right: 0%;
+  bottom: 0.5%;
+  border-radius: 1px;
+  width: 70%;
+  height: 14%;
+}
+#PanelSend #Send {
+  right: 0%;
+  width: 10.5%;
+  height: 80%;
+  right: 2%;
+  top: 10%;
+  position: absolute;
+  background-size: 100% 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#PanelSend #Send:hover {
+  background-color: #1b1d1d;
+  transition: 0.5s;
+}
+#PanelSend #MessForSend {
+  width: 69%;
+  height: 80%;
+  position: absolute;
+  left: 11%;
+  top: 10%;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+  color: #454949;
+  font-size: 18px;
+  outline: none;
+  resize: none;
+  white-space: pre-wrap;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body.dark #PanelSend #MessForSend::placeholder {
+  color: #c6caca;
+}
+body.dark #PanelSend #MessForSend {
+  color: #dee7e7;
+}
+#PanelSend #StickerShow {
+  width: 10%;
+  height: 80%;
+  background-color: transparent;
+  top: 8%;
+  position: absolute;
+  left: 0%;
+  color: #c6caca;
+  border: none;
+  min-width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+}
+#PanelSend #StickerShow:hover {
+  background-color: #1b1d1d;
+  transition: 0.5s;
+}
+#NewGroupPanel {
+  position: absolute;
+  background-color: rgb(80, 81, 102);
+  left: 35%;
+  width: 30%;
+  height: 25%;
+  top: 30%;
+  border-radius: 15px;
+  visibility: hidden;
+}
+#JoinPanel {
+  position: absolute;
+  background-color: rgb(80, 81, 102);
+  left: 35%;
+  width: 30%;
+  height: 25%;
+  top: 30%;
+  border-radius: 15px;
+  visibility: hidden;
+}
+#NewGroup {
+  background-image: url(../../ico/pencil.png);
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  background-color: orange;
+  height: 50px;
+  border: 10px solid orange;
+  border-radius: 50%;
+}
+#NewGroup:hover {
+  background-color: orange;
+  border: 13px solid orange;
+  transition: 0.5s;
+}
+#menuJoinNew {
+  position: absolute;
+  bottom: 95px;
+  margin-left: 10px;
+  display: flex;
+  width: 20%;
+  height: 20%;
+  left: 2%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  visibility: hidden;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(86, 86, 94);
+}
+#menuJoinNew button {
+  flex: 100%;
+  background-color: transparent;
+  height: 50%;
+  border: none;
+  width: 100%;
+  position: relative;
+  color: white;
+}
+#menuJoinNew button:hover {
+  background-color: #404444;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+#NewGroupPanel input:nth-child(1),
+#JoinPanel input:nth-child(1) {
+  color: white;
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  background-color: transparent;
+  font-size: 18px;
+  outline: none;
+}
+#NewGroupPanel input:nth-child(2),
+#JoinPanel input:nth-child(2) {
+  color: white;
+  position: absolute;
+  left: 10%;
+  top: 45%;
+  background-color: transparent;
+  font-size: 18px;
+  outline: none;
+}
+
+#NewGroupPanel #Submit,
+#JoinPanel #Submit {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  border-radius: 15px;
+}
+#NewGroupPanel button:last-child,
+#JoinPanel button:last-child {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  border-radius: 15px;
+}
